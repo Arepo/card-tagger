@@ -3,6 +3,8 @@ require 'pakyow'
 require 'active_record'
 require_relative 'lib/models/card.rb'
 
+# Run postgres -D /usr/local/var/postgres before starting
+
 Pakyow::App.define do
   configure :global do
     Bundler.require :default, Pakyow::Config.env
@@ -18,6 +20,7 @@ Pakyow::App.define do
     }
 
     ActiveRecord::Base.establish_connection(db_options)
+    ActiveRecord::Base.logger = Logger.new(STDOUT)
   end
 
   configure :prototype do

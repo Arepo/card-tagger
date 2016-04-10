@@ -1,3 +1,13 @@
+<form accept-charset="UTF-8" action="" method="get">
+  <label for="card-name">Card name</label>
+  <input id="card-name" name="card-name" type="text" />
+  <label for="tag-names">Tags</label>
+  <select id="tag-names" name="tag-names" multiple>
+    <option data-scope="tag-names" data-prop="tag"></option>
+  </select>
+  <input name="commit" type="submit" value="Search" />
+</form>
+
 <p data-scope="card" data-version="empty">
   Cardless
 </p>
@@ -5,8 +15,8 @@
 <article data-scope="card">
   <p data-prop="name">
   </p>
-  <p data-scope="tag">
-    <span data-prop="name"></span>
-  </p>
+  <ul>
+    <li data-scope="tag" data-prop="name"></li>
+  </ul>
 
 </article>

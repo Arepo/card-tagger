@@ -17,3 +17,4 @@ end
 # your gems here
 gem 'activerecord'
 gem 'pg'
+gem 'pry'
