@@ -1,5 +1,8 @@
 class Tag < ActiveRecord::Base
-  has_many :card_tags
+  # db fields:
+  # id, name, parent_tag_id
+
+  has_many :card_tags, dependent: :destroy
   has_many :cards, through: :card_tags
   belongs_to :parent_tag, class_name: "Tag"
 

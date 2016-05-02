@@ -11,7 +11,11 @@ Pakyow::App.routes do
 
     name = params["card-name"] || ""
 
-    view.scope(:card).apply(Card.by_name(name)) do |context, card|
+    tags = params['tag-ids'] || []
+
+    cards = Card.by_name(name).tagged_with(tags)
+
+    view.scope(:card).apply(cards) do |context, card|
       context.scope(:tag).apply(card.tags)
     end
   end
