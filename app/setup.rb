@@ -10,7 +10,7 @@ Pakyow::App.define do
     Bundler.require :default, Pakyow::Config.env
 
     # put global config here and they'll be available across environments
-    app.name = 'Pakyow'
+    app.name = 'Card Tagger'
   end
 
   configure :development do
