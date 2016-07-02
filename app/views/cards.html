@@ -1,0 +1,95 @@
+---
+template: main
+---
+
+<!-- @within head -->
+  <script src="scripts/cards.js" async=""></script>
+<!-- /within -->
+
+<div id="filters">
+  <form accept-charset="utf-8" action="" method="get">
+    <p>
+      <label for="card-name">Name</label>
+      <br/>
+      <input id="card-name" name="card-name" type="text"/>
+    </p>
+    <p>
+      <label for="tag-names">Tags</label>
+      <br/>
+      <select id="tag-names" name="tag-ids[]" multiple="">
+        <option data-scope="tag-names" data-prop="tag"></option>
+<!--
+        <option class="group" value="removal">removal</option>
+        <option value="removal/uncond">&emsp;uncond</option>
+        <option class="group" value="ramp">ramp</option>
+        <option value="ramp/foo">&emsp;foo</option>
+-->
+      </select>
+    </p>
+    <p>
+      <input name="commit" type="submit" value="Update"/>
+    </p>
+  </form>
+</div>
+
+
+<p data-scope="card" data-version="empty">
+  Cardless
+</p>
+
+<article data-scope="card">
+  <img src="images/old/black-lotus.jpg" width="226" height="311" alt="Black Lotus"/>
+  <ul class="tags">
+    <li data-scope="tag"><a data-prop="name" href=""></a></li>
+  </ul>
+</article>
+<!--
+<article>
+  <img src="images/old/black-lotus.jpg" width="226" height="311" alt="Black Lotus"/>
+  <ul class="tags">
+    <li><a href="">ramp/foo</a></li>
+    <li><a href="">ramp/bar</a></li>
+  </ul>
+</article>
+<article>
+  <img src="images/old/ancestral-recall.jpg" width="226" height="311" alt="Ancestral Recall"/>
+  <ul class="tags">
+    <li><a href="">draw/foozle</a></li>
+    <li><a href="">foo</a></li>
+    <li><a href="">bar</a></li>
+  </ul>
+</article>
+<article>
+  <img src="images/old/time-walk.jpg" width="226" height="311" alt="Time Walk"/>
+</article>
+<article>
+  <img src="images/old/mox-pearl.jpg" width="226" height="311" alt="Mox Pearl"/>
+</article>
+<article>
+  <img src="images/old/mox-sapphire.jpg" width="226" height="311" alt="Mox Sapphire"/>
+</article>
+<article>
+  <img src="images/old/mox-jet.jpg" width="226" height="311" alt="Mox Jet"/>
+</article>
+<article>
+  <img src="images/old/mox-ruby.jpg" width="226" height="311" alt="Mox Ruby"/>
+</article>
+<article>
+  <img src="images/old/mox-emerald.jpg" width="226" height="311" alt="Mox Emerald"/>
+</article>
+<article>
+  <img src="images/old/timetwister.jpg" width="226" height="311" alt="Timetwister"/>
+</article>
+<article>
+  <img src="images/old/time-vault.jpg" width="226" height="311" alt="Time Vault"/>
+</article>
+-->
+
+<!-- @within extra -->
+  <div id="settings">
+    <input id="newest-art" type="checkbox"><label for="newest-art"> Use newest art</label>
+  </div>
+  <div id="paging">
+    <a href="">1</a> &hellip; <a href="">4</a> <a href=""><b>5</b></a> <a href="">6</a> &hellip; <a href="">12</a>
+  </div>
+<!-- /within -->

@@ -1,0 +1,162 @@
+html {
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid black;
+  background: #eee;
+  z-index: 2;
+}
+
+h1 {
+  display: inline-block;
+  margin: 0;
+  padding: 4px;
+  font-size: 20px;
+}
+
+header nav {
+  display: inline-block;
+}
+
+header nav > ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+header nav > ul > li {
+  display: inline-block;
+  margin: 0;
+  border-left: 1px solid black;
+  padding: 0;
+  background: #ddd;
+}
+
+header nav > ul > li:last-of-type {
+  border-right: 1px solid black;
+}
+
+header nav > ul > li > a {
+  display: block;
+  padding: 8px;
+}
+
+main {
+  position: relative;
+  margin-top: 35px;
+  padding-top: 8px;
+}
+
+main > article {
+  display: inline-block;
+  position: relative;
+}
+
+ul.tags {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: right;
+}
+
+ul.tags > li a {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+#filters {
+  position: fixed;
+  top: 35px;
+  bottom: 0;
+  left: 0;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 1;
+  color: white;
+  transform: translateX(calc(-100% + 20px));
+  transition: transform 0.5s ease 0s;
+  -webkit-transition: transform 0.5s ease 0s;
+  -moz-transition: transform 0.5s ease 0s;
+  -o-transition: transform 0.5s ease 0s;
+}
+
+#filters::before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 2px;
+  content: "\25ba";
+  transform: translateY(-50%);
+  opacity: 1;
+  transition: opacity 0.5s ease 0s;
+  -webkit-transition: opacity 0.5s ease 0s;
+  -moz-transition: opacity 0.5s ease 0s;
+  -o-transition: opacity 0.5s ease 0s;
+}
+
+#filters:hover::before {
+  opacity: 0;
+}
+
+#filters:hover {
+  transform: translateX(0);
+}
+
+#filters > * {
+  opacity: 0;
+  transition: opacity 0.5s ease 0s;
+  -webkit-transition: opacity 0.5s ease 0s;
+  -moz-transition: opacity 0.5s ease 0s;
+  -o-transition: opacity 0.5s ease 0s;
+}
+
+#filters:hover > * {
+  opacity: 1;
+}
+
+input[type="text"], select {
+  width: 12em;
+}
+
+option.group {
+  font-weight: bold;
+}
+
+#settings {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 8px;
+  border: 1px solid rgba(255, 0, 0, 0.7);
+  background: rgba(255, 238, 238, 0.7);
+  padding: 4px;
+  z-index: 3;
+}
+
+#paging {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 8px;
+  border: 1px solid rgba(255, 0, 0, 0.7);
+  background: rgba(255, 238, 238, 0.7);
+  padding: 4px;
+  z-index: 3;
+}
+
+:link, :visited {
+  text-decoration: none;
+  color: darkblue;
+}
