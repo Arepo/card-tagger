@@ -10,8 +10,13 @@ Pakyow.app.routes :cards do
     tags = params['tag-ids'].to_a
     cards = Card.by_name(name).tagged_with(tags)
 
+    cards = cards.map do |card|
+      { image: { src: card.original_image_url, alt: card.name }, tags: card.tags }
+    end
+
     view.scope(:card).apply(cards) do |context, card|
-      context.scope(:tag).apply(card.tags)
+
+      context.scope(:tag).apply(card[:tags])
     end
   end
 end
